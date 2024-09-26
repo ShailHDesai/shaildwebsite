@@ -1,0 +1,770 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #0A0F23;
+    color: #D4D4D4;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1E1E1E;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #D4D4D4;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00FFAB;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00FFAB;
+}
+
+/* Introduction Section */
+.intro-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #0A0F23;
+    min-height: 90vh;
+}
+
+.intro-section p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00FFAB;
+}
+
+.intro-section #role {
+    font-weight: bold;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 28px;
+    color: #00FF00;
+    border-right: 3px solid #00FF00;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    animation: blink 0.7s step-end infinite alternate;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #00FFAB, #0099FF);
+    color: #1E1E1E;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00FFAB;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.linkedin-btn:hover {
+    background-color: #00FFAB;
+    box-shadow: 0 0 20px #00FFAB, 0 0 20px #0099FF;
+}
+
+/* Circle Arrow Animation (Vertical) */
+.loading-frame {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #3FC380;
+    animation: animate linear 2s infinite;
+}
+
+.circle:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.2s;
+    transform: translateY(20px);
+}
+
+.circle:nth-child(3) {
+    animation-delay: 0.3s;
+    transform: translateY(40px);
+}
+
+.circle:nth-child(4) {
+    animation-delay: 0.4s;
+    transform: translateY(60px);
+}
+
+.circle:nth-child(5) {
+    animation-delay: 0.5s;
+    transform: translateY(80px);
+}
+
+.circle:nth-child(6) {
+    animation-delay: 0.6s;
+    transform: translateY(100px);
+}
+
+.circle:nth-child(7) {
+    animation-delay: 0.7s;
+    transform: translateY(120px);
+}
+
+.circle:nth-child(8) {
+    animation-delay: 0.8s;
+    transform: translateY(140px);
+}
+
+.circle:nth-child(9) {
+    animation-delay: 0.9s;
+    transform: translateY(160px);
+}
+
+.circle:nth-child(10) {
+    animation-delay: 1s;
+    transform: translateY(180px);
+}
+
+@keyframes animate {
+    0%, 100% {
+        background-color: #3FC380;
+    }
+    50% {
+        background-color: #fff;
+    }
+}
+
+/* About Me Section */
+.about-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    color: #333333;
+    text-align: left;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content .about-text {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+    text-align: left;
+}
+
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #6a0dad, #8a2be2); /* Tech purple gradient */
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.6);
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #8a2be2;
+    box-shadow: 0 0 20px rgba(106, 13, 173, 0.8), 0 0 20px rgba(138, 43, 226, 0.8);
+}
+
+/* Education Section Styling */
+.education-section {
+    padding: 50px 20px;
+    background-color: #1a1a1a; /* Dark background for futuristic effect */
+    color: white;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.school {
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b; /* Dark background for card */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.school:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bcd4, 0 0 30px #3f51b5;
+}
+
+.school-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.school-details {
+    text-align: left;
+}
+
+.school-details h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0px 0px 5px #3f51b5;
+}
+
+.school-details p {
+    margin: 5px 0;
+    color: #bdbdbd;
+}
+
+/* Futuristic glow effect on hover */
+.school:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00bcd4, #3f51b5, #9c27b0, #e91e63);
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.school:hover:before {
+    opacity: 1;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    background-color: #0d0d0d; /* Technology Black */
+    color: white;
+    text-align: center;
+    position: relative; /* For the stars overlay */
+    overflow: hidden;
+}
+
+/* Starry background */
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    background-image: radial-gradient(2px 2px at 20% 20%, #fff, transparent),
+                      radial-gradient(1px 1px at 80% 30%, #fff, transparent),
+                      radial-gradient(1.5px 1.5px at 60% 70%, #fff, transparent),
+                      radial-gradient(2px 2px at 90% 40%, #fff, transparent),
+                      radial-gradient(1px 1px at 40% 90%, #fff, transparent),
+                      radial-gradient(1px 1px at 70% 80%, #fff, transparent);
+    background-size: 100px 100px;
+    animation: twinkling 10s infinite ease-in-out;
+    opacity: 0.6; /* Slight transparency for a subtle effect */
+    z-index: 1;
+}
+
+.skills-section h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    position: relative; /* Ensures it stays above the stars */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative; /* Ensures it stays above the stars */
+}
+
+.skill {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1a1a1a; /* Slightly lighter than the background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    min-width: 350px; /* Ensures consistent width */
+    z-index: 2; /* Ensures skill blocks stay above the stars */
+}
+
+.skill img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.skill span {
+    flex-grow: 1;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar {
+    position: relative;
+    width: 50%;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00bcd4, #3f51b5);
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+.percentage {
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Twinkling Stars Animation */
+@keyframes twinkling {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+    .skill {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 15px auto;
+    }
+}
+
+/* Projects Section Styling */
+.projects-section {
+    padding: 50px 20px;
+    background-color: #333; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.hex-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between hexagons */
+    margin-bottom: 20px;
+}
+
+.hex-link {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hexagon {
+    width: 120px;
+    height: 120px;
+    background-color: #2a2a6e;
+    position: relative;
+    margin: 35px 0;
+    display: inline-block;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inherit; /* Apply the same hexagon shape to the image */
+    transition: opacity 0.5s ease;
+}
+
+.hexagon:hover img {
+    opacity: 0.9; /* Slight fade effect on hover */
+}
+
+.hexagon:hover {
+    transform: rotateY(360deg); /* 3D cube rotation effect */
+    box-shadow: 0px 0px 20px rgba(148, 0, 211, 0.8), 0px 0px 30px rgba(0, 123, 255, 0.8);
+}
+
+.hexagon::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #9400d3, #007bff);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.hexagon:hover::before {
+    opacity: 1;
+}
+
+/* Sparkling Animation */
+@keyframes sparkle {
+    0%, 100% {
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    }
+}
+
+.hexagon:hover {
+    animation: sparkle 1.5s infinite ease-in-out; /* Sparkle effect on hover */
+}
+
+.projects-instruction {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+/* Interests Section */
+.interests-section {
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.interests-section h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif; /* Galaxy-styled font */
+}
+
+/* Container for the interest items */
+.interests-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Individual interest block */
+.interest {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.interest:hover {
+    transform: scale(1.1);
+}
+
+.interest-icon-container {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 50%, transparent 100%);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.6), 0px 0px 30px rgba(148, 0, 211, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.interest-icon-container:hover {
+    box-shadow: 0px 0px 40px rgba(0, 255, 255, 1), 0px 0px 60px rgba(0, 255, 0, 0.8);
+}
+
+/* Interest Icons */
+.interest-icon-container img {
+    width: 80px;
+    height: 80px;
+}
+
+.interest span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Dynamic Starry Background */
+.interests-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(2px 2px at 20% 20%, #fff, transparent),
+                      radial-gradient(1px 1px at 80% 30%, #fff, transparent),
+                      radial-gradient(1.5px 1.5px at 60% 70%, #fff, transparent),
+                      radial-gradient(2px 2px at 90% 40%, #fff, transparent),
+                      radial-gradient(1px 1px at 40% 90%, #fff, transparent),
+                      radial-gradient(1px 1px at 70% 80%, #fff, transparent);
+    background-size: 100px 100px, 50px 50px;
+    opacity: 0.6;
+    animation: starsMove 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes starsMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, -100%);
+    }
+}
+
+.interests-container,
+h2 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #0d0d0d; /* Space Black */
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Stars Background */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(2px 2px at 20% 20%, #fff, transparent),
+                      radial-gradient(1px 1px at 80% 30%, #fff, transparent),
+                      radial-gradient(1.5px 1.5px at 60% 70%, #fff, transparent),
+                      radial-gradient(2px 2px at 90% 40%, #fff, transparent),
+                      radial-gradient(1px 1px at 40% 90%, #fff, transparent),
+                      radial-gradient(1px 1px at 70% 80%, #fff, transparent);
+    background-size: 100px 100px, 50px 50px;
+    opacity: 0.6;
+    animation: moveStars 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes moveStars {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5), 0px 0px 15px rgba(148, 0, 211, 0.6);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8), 0px 0px 30px rgba(0, 255, 0, 0.6);
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #007bff;
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 1), 0px 0px 30px rgba(0, 123, 255, 0.8);
+}
